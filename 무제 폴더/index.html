@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-206703055-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-206703055-1');
+</script>
+
+    <title>FRUIT mbti</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        body {
+            background-image: url(background.png);
+            background-size: 3000px 1500px;
+            background-repeat: no-repeat;
+        }
+        @font-face {
+        font-family: 'DungGeunMo';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+         font-weight: normal;
+         font-style: normal;
+        }  
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7684300438384684"
+    crossorigin="anonymous"></script>
+</head>
+<body class="container">
+    <article class = "start">
+        <h1 class="mt-5 text-center">과일 테스트</h1>
+        <img class="bar" src="line.png">
+        <h2 class="txtSubtitle mt-3 text-center ">나와 닮은 과일을 찾아보세요!</h2>
+        <img class="bar" src="line.png">
+    <div class="d-grid gap-2 col-0 mx-auto">
+        <button type="button" class="btn btn-outline-light mt-5 btn-lg" onclick='start();'>테스트 시작하기</button>
+    </div>
+    </article>
+    <article class= "question">
+        <div class="progress mt-5">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: calc(100/12*1%)"></div>
+        </div>
+        <h2 id="title" class="text-center mt-5 ">문제</h2>
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn btn-light mt-5">Secondary</button>
+        <button id="B" type="button" class="btn btn-light mt-5">Secondary</button>
+    </article>
+    <article class="result">
+        <h1 class="text-center mt-4 " style="font-size: 25px;">당신은...</h1>
+        <img id="img" class=" mt-2" src="" alt="">
+        <h2 id="explain" class="text-center mt-3">설명1</h2>
+        <h3 id="animal" class="text-center mt-2">과일 이름</h3>
+        <button id="button" type="button" class="btnExplain text-left btn btn-light">Secondary</button>
+        <table class="mt-1 mb-3">
+            <tr>
+                <td><img id="miniImgP" class=" mt-2" src="" alt="잘 맞는 초콜릿 이미지"></td>
+                <td>
+                    <h4 class="text-center mt-2 mr-1 mb-1" style="font-size:15px; color:deepskyblue">&lt; 잘 맞아요<p><span id="relatedP" style="font-size:18px; color:black">None</span></p></h4>
+                </td>
+                <td>
+                    <h5 class="text-center mt-2 ml-1 mb-1" style="font-size:15px; color:orangered">별로에요 &gt;<p><span id="relatedN" style="font-size:18px; color:black">None</span></p></h5>
+                </td>
+                <td><img id="miniImgN" class=" mt-2" src="" alt="별로인 초콜릿 이미지"></td>
+            </tr>
+        </table>
+        
+        <button class="btn btn-outline-light text-center mt-3 mb-4" onclick="location.reload();">다시 하려면 여기를 누르세요!</button>
+        <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="share addthis_inline_share_toolbox"></div>
+    </article>
+
+    <article class="kakao_ad mt-4">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-NnrGySHezRRCzebc" 
+        data-ad-width   = "320" 
+        data-ad-height  = "100"></ins> 
+    </article>
+
+    <article class="result">
+        <h1 class="text-center mt-5" style="font-size:16px; color:whitesmoke;">INSTAGRAM: _1sa6e1_h </h1>
+        <h2 class="text-center mt-0 mb-4 style=" style="font-size:13px; color:whitesmoke;">Copyright 2021. 허예진 All right reserved.</h2>
+    </article>
+
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+        var num = 1;
+        var q = {
+            1: {"title": "오늘이 설레는 크리스마스라면?", "type": "EI", "A": "친구들과 함께 홈파티를 즐긴다", "B": "집에서 가족들과 함게 영화를 보며 보낸다"},
+            2: {"title": "당신의 애인이 다쳤다고 전화가 왔다면?", "type": "TF", "A": "무슨일인지,뭐하다 다쳤는지 물어본다", "B": "괜찮은지, 병원은 다녀왔는지 물어본다"},
+            3: {"title": "여가시간이 생겼다면?", "type": "JP", "A": "예전부터 하고 싶었던 것들을 차근차근 해본다", "B": "지금 생각나는 것을 해본다"},
+            4: {"title": "기다리던 주말이 왔다!", "type": "EI", "A": "친구들과 여행을 간다", "B": "혼자 하고싶은 것들을 한다"},
+            5: {"title": "단골 카페에 못보던 메뉴가 생겼다면?", "type": "SN", "A": "원래 먹던 메뉴를 시킨다", "B": "새로운 메뉴를 도전해본다"},
+            6: {"title": "친구랑 만나기로 한 당일 친구가 취소를 한다면?", "type": "EI", "A": "다른 친구를 만난다", "B": "오히려 좋다고 생각한다"},
+            7: {"title": "과제가 다음주까진데 다음주에 여행을 간다면?", "type": "JP", "A": "여행가기전까지 완성하여 제출한다", "B": "여행가서 마감시간 직전에 제출한다"},
+            8: {"title": "친구가 시험을 망쳤다고 한다면?", "type": "TF", "A": "왜 망쳤는지 조언을 해준다", "B": "기분풀겸 맛있는 거 먹으러 가자고 한다"},
+            9: {"title": "인공위성이 지구로 추락한다고 한다면?", "type": "SN", "A": "대기권을 뚫을 수 있을지 생각해본다", "B": "내가 있는 곳으로 떨어지면 어떡하지라며 수백가지 생각을 한다"},
+            10: {"title": "카톡이 999+가 되었다면?", "type": "JP", "A": "999+가 되기전에 이미 다 본다", "B": "카톡뿐만 아니라 모든 SNS가 그렇기 때문에 신경쓰지 않는다"},
+            11: {"title": "인터넷에서 천재테스트를 했더니 천재라고 나왔다면?", "type": "SN", "A": "말도 안되는 소리라며 무시한다", "B": "모든 퍼즐이 맞춰지면서 내가 천재라서 그랬다고 생각한다"},
+            12: {"title": "친하다고 생각했던 친구가 나를 별로라고 생각했다면?", "type": "TF", "A": "그냥 그러려니 하며 넘어간다", "B": "역시 사람은 믿으면 안된다며 슬퍼한다"},
+        }
+        var result = {
+            "ESTJ": {"Ptxt": "블루베리", "Ntxt": "귤", "Pimg": "blueberries.png", "Nimg": "mandarin.png","animal": "감", "explain": "관리적이고 실력이 뛰어난", "button": "<p>● 실질적이고 현실감각이 뛰어나요</p> <p>● 가능성보다는 현재의 사실을 추구해요</p> <p>● 겉보기엔 무척 철저하고 엄격해보이지만 주변 사람들에겐 의리와 배려를 보여줘요</p> <p>● 사회의 틀에 맞지 않게 행동하는 사람과는 상극이 될 수 있어요</p>", "img": "Persimmon.png"},
+            "ESTP": {"Ptxt": "귤", "Ntxt": "블루베리", "Pimg": "mandarin.png", "Nimg": "blueberries.png","animal": "체리", "explain": "두뇌와 에너지가 뛰어난", "button": "<p>● 타인이 정해준 도덕적 잣대가 아닌 자기 자신 스스로가 정한 도덕적 잣대에 따라 사고하고 행동해요</p><p>● 이론공부보다는 상황에 직접 뛰어들어 체험을 통해 경험하는 것을 선호해요</p><p>● 사람에 대해 선입감이 없고 개방적이예요</p><p>● 매우 빠르게 생각과 행동을 하고 현실적이기 때문에 감정적이거나 우유부단한 사람에 대해 답답해 하는 경향이 있어요</p>", "img": "Cherry.png"},
+            "ESFJ": {"Ptxt": "바나나", "Ntxt": "복숭아", "Pimg": "banana.png", "Nimg": "peach.png","animal": "수박", "explain": "사교적이고 열성적인", "button": "<p>● 다른 사람을 돕는 것을 즐기며 타인과 함께 지내는 것을 행복으로 여겨요</p><p>● 다른 사람의 필요와 감정에 민감하게 반응하며 충족하고자 노력해요</p><p>● 불친절이나 무관심에 쉽게 상처를 받으며 주눅들어요</p><p>● 배려하고 존중하며 사회적으로 포용적인 마음을 가졌어요</p>", "img": "watermelon.png"},
+            "ESFP": {"Ptxt": "복숭아", "Ntxt": "바나나", "Pimg": "peach.png", "Nimg": "banana.png","animal": "파인애플", "explain": "열정과 에너지가 넘치는", "button": "<p>● 에너지가 넘치고 활동적이며 변화에 잘 적응하는 특징이 있어요</p><p>● 합리적이고 실용적인 성격이며 자발적으로 행동하며 어떤 상황이던 잘 적응해요</p><p>● 뛰어난 사교성으로 인기가 많고 밝고 재밌는 분위기를 이끌어요</p><p>● 협조를 잘하고 남을 도우려 노력하며 공감능력이 뛰어나요</p>", "img": "pineapple.png"},
+            "ENTP": {"Ptxt": "석류", "Ntxt": "사과", "Pimg": "pmegranate.png", "Nimg": "apple.png","animal": "방울토마토", "explain": "지적인 도전을 두려워하지 않는", "button": "<p>● 외향적이기는 하나 외향형 중에서는 가장 내향적이에요</p><p>● 자존감이 높고 자신에 대한 확신이 강해요</p><p>● 다른 사람들이 자신을 무시하는 것을 굉장히 싫어해요</p><p>● 정서적 교류에는 크게 관심없는 경우가 많으며, 인간관게에 가장 둔감한 편이에요</p>", "img": "Cherry tomato.png"},
+            "ENFP": {"Ptxt": "레몬", "Ntxt": "딸기", "Pimg": "lemon.png", "Nimg": "Strawberry.png","animal": "참외", "explain": "창의적이며 활발한", "button": "<p>● 감정이 얼굴에 잘 들어나요</p><p>● 눈치가 없는 척 하지만 사실 눈치가 엄청 빨라요</p><p>● 좋아하는 사람과 싫어하는 사람의 구별이 심해요</p><p>● 작은 일에도 감정의 기복이 심해요</p>", "img": "melon.png"},
+            "ENTJ": {"Ptxt": "사과", "Ntxt": "석류", "Pimg": "apple.png", "Nimg": "pmegranate.png","animal": "포도", "explain": "대담하면서도 상상력이 풍부한", "button": "<p>● 감정표현이 솔직해서 타인이 상처를 받을 수 있어요</p><p>● 가까운 사람에게 헌신적이지만, 멀어지면 차가워요</p><p>● 인기있는 사람보다 능력있는 사람으로 여겨지길 원해요</p><p>● 가끔 엉뚱할 때가 있어요</p>", "img": "grape.png"},
+            "ENFJ": {"Ptxt": "딸기", "Ntxt": "레몬", "Pimg": "Strawberry.png", "Nimg": "lemon.png","animal": "망고", "explain": "넘치는 카리스마와 영향력있는", "button": "<p>● 타인의 관심사에 귀 기울이며 그들을 배려하려 노력해요</p><p>● 정말로 가치 있다고 여기는 일에 대해 헌신이 강해요</p><p>● 외교적이고 주변과의 조화능력이 뛰어나요</p><p>● 관심사가 다양하며 학습속도가 빨라요</p>", "img": "mango.png"},
+            "ISFP": {"Ptxt": "포도", "Ntxt": "방울토마토", "Pimg": "grape.png", "Nimg": "Cherry tomato.png","animal": "사과", "explain": "매력이 넘치는", "button": "<p>● 표현이 적고 솔직하게 말하는 경우가 적어요</p><p>● 화가 나더라도 쉽게 삭히거나 조용히 넘어가요</p><p>● 싫은 티를 크게 내지 않고 지나가는 편이에요</p><p>● 정해진 틀에 묶이는 것을 싫어하며 충동에 따라 움직이는 편이에요</p>", "img": "apple.png"},
+            "ISTP": {"Ptxt": "망고", "Ntxt": "참외", "Pimg": "mango.png", "Nimg": "melon.png","animal": "딸기", "explain": "대담하고 현실적인", "button": "<p>● 일반적으로 조용한 편이지만 필요에 따라 사교적이에요</p><p>● 틀에 박히고 통념적인 생활을 싫어해요</p><p>● 타인의 일에 무관심한 편이에요</p><p>● 손재주가 뛰어나며 도구를 다루는데 관심이 있어요</p>", "img": "Strawberry.png"},
+            "ISFJ": {"Ptxt": "방울토마토", "Ntxt": "포도","Pimg": "Cherry tomato.png", "Nimg": "grape.png","animal": "석류", "explain": "헌신적이고 성실한", "button": "<p>● 상대방의 이야기를 경청하며 공감해주지만, 본인의 정말 깊은 고민과 이야기는 잘 말하지 않아요</p><p>● 개인 시간을 방해받는 것을 정말 싫어해요</p><p>● 끈기 있고 성실하며 안정감있어요</p><p>● 남에게 싫은 소리를 잘 못하며 싫은 소리를 들은 경우엔 티는 안내지만 속상해해요</p>", "img": "pmegranate.png"},
+            "ISTJ": {"Ptxt": "참외", "Ntxt": "망고", "Pimg": "melon.png", "Nimg": "mango.png","animal": "레몬", "explain": "사실에 근거하여 사고하는", "button": "<p>● 의젓한 성격이므로 장남, 장녀같다는 말을 많이 들어요</p><p>● 실수한 것을 참지 못하고 즉각 수정하기를 원해요</p><p>● 주로 가까운 사람들에게 직설적인 표현을 많이 하는 편 이에요</p><p>● 원리,원칙적이에요</p>", "img": "lemon.png"},
+            "INTJ": {"Ptxt": "파인애플", "Ntxt": "수박", "Pimg": "pineapple.png", "Nimg": "watermelon.png","animal": "복숭아", "explain": "상상력이 풍부하며 철두철미한", "button": "<p>● 자기 통제력과 몰두가 강한 편에 속해요</p><p>● 평소 내면이 사사롭고 복잡해요</p><p>● 효율적이고 합리적인 것을 좋아해요</p><p>● 내용의 실존성과 진실 여부를 중시하는 편이에요</p>", "img": "peach.png"},
+            "INTP": {"Ptxt": "수박", "Ntxt": "파인애플", "Pimg": "watermelon.png", "Nimg": "pineapple.png","animal": "바나나", "explain": "끊임없이 새로운 지식에 목말라하는", "button": "<p>● 조용하고 과묵하며 논리와 분석으로 문제를 해결하길 좋아해요</p><p>● 가끔, 매우 추상적이고 비현실적으로 생각하는 경향이 있어요</p><p>● 계획을 그대로 수행하기보다는 즉흥적 활동을 통하여 자기역량을 효과적으로 발휘하는 편이에요</p><p>● 처음에는 차갑다는 인상을 줄 수 있으나 , 속은 털털하고 캐주얼해요</p>", "img": "banana.png"},
+            "INFJ": {"Ptxt": "체리", "Ntxt": "감", "Pimg": "Cherry.png", "Nimg": "Persimmon.png","animal": "귤", "explain": "조용하고 신비로운", "button": "<p>● 감성적이며, 동시에 이성적이에요</p><p>● 겉보기엔 차갑지만 속은 따스해요</p><p>● 자아성찰을 자주 하는 편이며, 본인 스스로에게 매우 엄격해요</p><p>● 언어 능력 및 감각이 좋아 국어를 포함한 어학 과목에 강해요</p>", "img": "mandarin.png"},
+            "INFP": {"Ptxt": "감", "Ntxt": "체리", "Pimg": "Persimmon.png", "Nimg": "Cherry.png","animal": "블루베리", "explain": "상냥하고 낭만적인", "button": "<p>● 이해심이 많고 적응력이 좋으며, 대체로 관대하고 개방적이에요</p><p>● 타인의 감정에 민감하고, 좋아하는 사람을 기쁘게 하는 것을 즐거워해요</p><p>● 조화롭게 살고자 하며, 분쟁을 피하고 싶어해요</p><p>● 자신과 관련된 사람이나 일에 대해 책임감이 강하고 성실해요</p>", "img": "blueberries.png"},
+        }
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        $("#B").click(function(){
+            next();
+        })
+
+        function next() {
+            if (num == 13) {
+                $(".question").hide();
+                $(".result").show();
+                var mbti = "";
+                ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
+                ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
+                $("#button").html(result[mbti]["button"]);
+                $("#relatedP").html(result[mbti]["Ptxt"]);
+                $("#relatedN").html(result[mbti]["Ntxt"]);
+                $("#miniImgP").attr("src",result[mbti]["Pimg"]);
+                $("#miniImgN").attr("src",result[mbti]["Nimg"]);
+            } else{
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+    </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-613095fe2a159846"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7684300438384684"
+crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+article{
+    display: flex;
+    flex-direction: column;
+    font-family: 'DungGeunMo';
+    color: white;
+}
+.question {
+    display: none;
+    font-family: 'DungGeunMo';
+    color: white;
+}
+.result{
+    display: none;
+    font-family: 'DungGeunMo';
+    color: white;
+}
+
+#img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.start {
+    display: flex;
+    color: white;
+    font-family: 'DungGeunMo';
+}
+
+.txtSubtitle{
+    font-size: 20px;
+    color: white;
+    font-family: 'DungGeunMo';
+}
+
+.h1,h1 {
+    font-size: 60px;
+}
+
+.bar {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.btnExplain {
+    width: 320px;
+    height: auto;
+    margin: auto;
+    font-size: 20px;
+    background-color: whitesmoke;
+    color: gray;
+    
+}
+.h2,h2 {
+    font-size: 30px;
+    color: grey;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-spacing: 2px;
+    border-collapse: collapse;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+    margin-top: .25rem!important;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+#miniImgP, #miniImgN {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+}
+
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
